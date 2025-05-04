@@ -6,7 +6,7 @@ CONTAINER_ID=$(docker ps -f name=diploma-project-backend -q)
 
 if [ -z "$CONTAINER_ID" ]; then
   echo "Backend container is not running, starting it..."
-  docker-compose up -d
+  docker compose up -d
   
   # Wait a moment for the container to try to start
   sleep 5
